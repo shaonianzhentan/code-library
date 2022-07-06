@@ -1,0 +1,22 @@
+
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+
+    </head>
+
+    <body>
+        <script src="./event.js"></script>
+        <script>
+            const e = new EventEmit()            
+            const fn = (data) => {
+                console.log(data)
+            }
+            e.on('click', fn)
+            e.emit('click', 'data')
+            e.off('click', fn)
+        </script>
+    </body>
+
+    </html>
