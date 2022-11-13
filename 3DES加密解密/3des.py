@@ -1,3 +1,4 @@
+# pip install pyDes
 import pyDes, base64, hashlib
 
 class EncryptHelper:
