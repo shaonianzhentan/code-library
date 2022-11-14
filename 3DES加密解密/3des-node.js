@@ -1,6 +1,6 @@
 const crypto = require('crypto')
 
-class EncryptHelper {
+module.exports = class EncryptHelper {
     constructor(key, iv) {
         key = this.md5(key)
         iv = this.md5(iv).substring(0, 11) + '='
@@ -26,7 +26,6 @@ class EncryptHelper {
         return crypto.createHash('md5').update(data).digest('hex')
     }
 }
-
 
 const helper = new EncryptHelper("123456", "111")
 var oldValue = "13800138000";
